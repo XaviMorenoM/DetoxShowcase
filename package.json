@@ -31,6 +31,7 @@
     "babel-jest": "17.0.0",
     "babel-preset-react-native": "1.9.0",
     "chai": "^3.5.0",
+    "detox": "^5.2.0",
     "eslint": "^3.5.0",
     "eslint-config-airbnb": "^11.1.0",
     "eslint-plugin-import": "^1.14.0",
@@ -65,8 +66,18 @@
     "native-base boilerplate",
     "react-native with native-base"
   ],
-  "upstreamRepo": "git@github.com:GeekyAnts/react-native-native-base-seed.git",
+  "upstredeamRepo": "git@github.com:GeekyAnts/react-native-native-base-seed.git",
   "jest": {
     "preset": "jest-react-native"
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/NativeStarterKit.app",
+        "build": "xcodebuild -project ios/NativeStarterKit.xcodeproj -scheme NativeStarterKit -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "name": "iPhone 7"
+      }
+    }
   }
 }
