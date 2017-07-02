@@ -33,7 +33,7 @@ class Login extends Component {
 
   login() {
     if (this.props.login) {
-      this.props.login(this.state.email, this.state.password);
+      this.props.login(this.state.email, this.state.password, this.props.navigation);
     }
   }
 
@@ -111,5 +111,5 @@ class Login extends Component {
 }
 
 export default connect(state => ({firebaseMessage: state.user.firebaseMessage}), dispatch => ({
-  login: (email, password) => dispatch(login(email, password))
+  login: (email, password, navigation) => dispatch(login(email, password, navigation))
 }))(Login);

@@ -4,7 +4,7 @@ import firebase from '../utils/Firebase';
 export const SET_USER = 'SET_USER';
 export const FIREBASE_MESSAGE = 'LOGIN_FIREBASE_MESSAGE';
 
-export function login(email: string, password: string): Action {
+export function login(email: string, password: string, navigator): Action {
   return dispatch => {
 
     dispatch({
@@ -19,8 +19,8 @@ export function login(email: string, password: string): Action {
           type: FIREBASE_MESSAGE,
           payload: `We are happy to se you again ${user.providerData[0].email}`
         });
+        navigator.navigate("Home");
       }
-      else console.warn('NO');
 
     }, error => {
       const errorMessage = error.toString();

@@ -15,7 +15,7 @@ function setup(): React.Component {
     constructor() {
       super();
       this.state = {
-        isLoading: false,
+        isLoRading: false,
         store: configureStore(() => this.setState({isLoading: false})),
       };
     }
