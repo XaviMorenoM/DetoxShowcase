@@ -6,7 +6,7 @@
     "postinstall": "remotedev-debugger",
     "start": "node_modules/react-native/packager/packager.sh",
     "eslint": "eslint",
-    "test": "mocha"
+    "test": "detox test"
   },
   "dependencies": {
     "color": "^0.11.3",
