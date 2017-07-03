@@ -35,8 +35,6 @@ function setup(): React.Component {
           DeepLinking.evaluateUrl(url);
         }
       });
-
-
     }
 
     render() {
